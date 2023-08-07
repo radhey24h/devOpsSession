@@ -3,7 +3,8 @@ FROM node:18.10-alpine as build
 
 # set working directory
 WORKDIR /app
-
+#
+RUN npm cache clean --force
 #copy the react app to the container
 COPY . /app/
 
@@ -14,7 +15,7 @@ RUN npm run build
 
 # prepare nginx
 FROM nginx:1.16.0-alpine
-COPY --from=build /app/build /usr/share/nginx/html
+COPY --from=build /app/dist/ang-app /usr/share/nginx/html
 #in case if you want to add some permission on copied build folder subfolder we can write below commands
 RUN find /usr/share/nginx/html -type d -exec chmod 755 {} +
 RUN find /usr/share/nginx/html -type f -exec chmod 755 {} +
