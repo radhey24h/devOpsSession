@@ -19,7 +19,7 @@ RUN ECHO "${env_name}"
 RUN npm run build:${env_name}
 
 # without variable name
-RUN npm run build 
+RUN npm run build:${env_name} 
 
 
 # prepare nginx

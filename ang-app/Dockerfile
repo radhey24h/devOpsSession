@@ -14,8 +14,8 @@ RUN npm install -g @angular/cli --silent
 
 #in case if we want to send a parameter and build on the basis of parameter we can use below command and we have to setup it in package json
 ARG envName
-ENV env_name=${envName}
-RUN ECHO "The env_name is ${env_name}"
+ENV env_name=$envName
+RUN echo "The env_name is ${env_name}"
 RUN npm run build:${env_name}
 
 # without variable name
