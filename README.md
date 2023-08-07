@@ -31,15 +31,45 @@ I have created a docker file on root in all the application (react, angular, nod
     docker stop 4bb7ec00c5b4 => (docker will stop the container 4bb7ec00c5b4)
     docker rm 4cb626f61e55 => (docker will remove the container 4cb626f61e55)
 
-# a: for angular application (build and run docker image on your local)
+# For angular application (build and run docker image on your local)
     docker build -f Dockerfile -t ang-app . => (go inside project folder and run command to build and tag an image)
     docker run -it -p 3000:80 ang-app  => (docker will run the image ang-app in interactive mode on 3000 port )
     docker run -D -p 3000:80 ang-app  => (docker will run the image ang-app in dettach mode on 3000 port )
 
-# a: for react application (build and run docker image on your local)
+# For react application (build and run docker image on your local)
     docker build -f Dockerfile -t react-app . => (go inside project folder and run command to build and tag an image)
     docker run -it -p 3000:80 react-app  => (docker will run the image ang-app in interactive mode on 3000 port )
     docker run -D -p 3000:80 react-app  => (docker will run the image ang-app in dettach mode on 3000 port )
+
+# For dotnet core API application (build and run docker image on your local)
+ will provide details very soon..
+
+# For nde js application (build and run docker image on your local)
+ will provide details very soon..
+
+# For django API application (build and run docker image on your local)
+ will provide details very soon..
+
+# docker compose file
+ will provide details very soon..
+
+# CI/CD with github actions
+ will provide details very soon..
+
+# CI/CD with AZURE DevOps
+ will provide details very soon..
+
+# CI/CD with Jenkins 
+ will provide details very soon..
+
+# docker kubernates
+ will provide details very soon..
+
+# terraform with AZURE
+ will provide details very soon..
+
+# terraform with AWS
+ will provide details very soon..
 
 # docker sql server local setup
     docker pull mcr.microsoft.com/mssql/server:2019-latest   => 
